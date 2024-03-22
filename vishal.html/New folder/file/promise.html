@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+let promise=createorder()
+.then(function(msg){
+
+   console.log(msg); 
+})
+.catch(function(error){
+    console.log(error)
+})
+
+
+function createorder(){
+let flag=false;
+let pr=new Promise(function(resolve,reject){
+
+if(flag)
+{
+    resolve(12345);
+}
+reject('Error');
+
+})
+
+
+
+return pr;
+    
+}
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
